@@ -4,11 +4,11 @@ import { Card } from "react-bootstrap"
 const ProductItem = ({ title, imgUrl, handleImageChange, reorderTables}) => {
   console.log(title, imgUrl)
   const handleClick = () => {
-    reorderTables()
     handleImageChange()
+    reorderTables()
   }
   return (
-    <Card className="h-75 cursor-pointer" onClick={handleClick}>
+    <Card className="h-75 cursor-pointer hover:scale-105 hover:shadow transition" onClick={handleClick}>
       <Card.Img
         variant="top"
         src={imgUrl}

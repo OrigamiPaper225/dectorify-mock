@@ -86,11 +86,11 @@ export default function App() {
     },
     {
       image: room2,
-      caption: "New table selected",
+      caption: "Larenda Coffee Table selected",
     },
     {
       image: room3,
-      caption: "Switched cabinet and sofa"
+      caption: "Switched cabinet and sofa positions"
     },
     {
       image: room4,
