@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { MdOutlineZoomIn } from "react-icons/md";
 import { GrUndo } from "react-icons/gr";
 
-export default function ImageScreen({imageInfo}) {
+export default function ImageScreen({imageInfo, handleImageBack}) {
     return (
         <div className=" flex flex-col mt-10 pt-10 w-full h-full">
             <div className="mx-5 flex flex-col justify-center items-center">
@@ -40,7 +40,7 @@ export default function ImageScreen({imageInfo}) {
                 <img width={80} src={imageInfo.image} alt="img6" className="cursor-pointer" />
             </div>  
             <div className="flex w-full h-20 justify-center items-center px-20 gap-6">
-                <div className=" w-12 h-12 outline outline-gray-200 rounded-full flex justify-center items-center cursor-pointer">
+                <div className=" w-12 h-12 outline outline-gray-200 rounded-full flex justify-center items-center cursor-pointer" onClick={handleImageBack}>
                     <GrUndo size={25} />
                 </div>
                 <div className=" w-64 h-10 rounded-full cursor-pointer text-white text-lg font-medium bg-purple-800 flex justify-center items-center">

@@ -3,6 +3,7 @@ import room0 from "./assets/room_pictures/rooms_0.jpg"
 import room1 from "./assets/room_pictures/rooms_1.jpg"
 import room2 from "./assets/room_pictures/rooms_2.jpg"
 import room3 from "./assets/room_pictures/rooms_3.jpg"
+import room4 from "./assets/room_pictures/rooms_4.jpg"
 import NavbarComponent from "./components/NavbarComponent"
 import ImageScreen from "./components/ImageScreen"
 import "bootstrap/dist/css/bootstrap.css"
@@ -34,7 +35,7 @@ export default function App() {
       caption: "Switched cabinet and sofa"
     },
     {
-      image: room3,
+      image: room4,
       caption: "Switched to evening lighting"
     }
   ]
@@ -117,6 +118,14 @@ export default function App() {
     }
     handleSpinner()
   }
+  
+  const handleImageBack = () => {
+    const prevIndex = imageIndex - 1
+    if (prevIndex >= 0) {
+      setImageIndex(prevIndex)
+    }
+  }
+
   return (
     <>
       <NavbarComponent />
@@ -130,7 +139,7 @@ export default function App() {
                 </Spinner>
               </div>
             ) : (
-              <ImageScreen imageInfo={images[imageIndex]} />
+              <ImageScreen imageInfo={images[imageIndex]} handleImageBack={handleImageBack} />
             )}
           </div>
           <div className=" flex w-1/2">
