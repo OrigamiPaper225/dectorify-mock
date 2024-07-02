@@ -10,24 +10,32 @@ const RecProducts = ({
   return (
     <div className="flex flex-column content-center justify-center mt-5">
       <div className="">
-        <p className="font-bold text-lg text-center">Products You May Like</p>
+        <p className="font-bold text-2xl text-center">Products You May Like</p>
         <p className="text-sm text-slate-400 text-center">
           Here are a few products to get you started on your design journey.
         </p>
       </div>
       <div className="-space-y-4">
-        <Assortment title="Coffee Tables" product={products1} />
-        <Assortment title="Lamps" product={products2} />
+        <Assortment
+          title="Coffee Tables"
+          product={products1}
+          handSpinner={handleSpinner}
+        />
+        <Assortment
+          title="Lamps"
+          product={products2}
+          handSpinner={handleSpinner}
+        />
       </div>
-      <hr />
+      <hr className="-mt-5" />
       <div>
-        <h1 className="py-3 text-2xl font-bold text-center">
-          Edit your room here!
+        <h1 className="py-3 text-xl font-bold  text-center">
+          Personalize Your Room with Chat Prompt!
         </h1>
         <div className="w-full relative flex space-y-3">
           <input
             type="text"
-            className="py-3 px-4 outline block w-100 border-black rounded-lg text-lg pr-20"
+            className="py-3 px-4 block w-100 border border-stone-600 border-2 rounded-lg text-lg pr-20"
             placeholder="Enter prompt here..."
           />
           <div
