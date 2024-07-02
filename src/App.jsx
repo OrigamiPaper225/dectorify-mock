@@ -110,7 +110,7 @@ export default function App() {
     if (nextIndex < images.length) {
       setImageIndex(nextIndex)
     }
-    // handleSpinner()
+    handleSpinner()
   }
 
   const reorderTables = () => {
