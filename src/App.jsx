@@ -1,11 +1,12 @@
 import default_room from "./assets/default_room.png"
+import NavbarComponent from "./components/NavbarComponent"
 
 export default function App() {
   return (
+    <>
+    <NavbarComponent />
     <div className="w-screen h-full flex flex-col">
-      <div className="h-12 bg-gray-300">
-        navbar
-      </div>
+      
       <div className="flex w-full">
         <div className=" flex w-1/2">
           <div className=" flex flex-col mt-10 pt-10 w-full h-full">
@@ -25,5 +26,6 @@ export default function App() {
         </div>
       </div>
     </div>
+    </>
   )
 }
