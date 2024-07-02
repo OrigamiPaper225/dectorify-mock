@@ -6,7 +6,7 @@ const Assortment = ({ title, product }) => {
   console.log(product)
   return (
     <>
-      <div className="text-bold text-lg">{title}</div>
+      <div className="text-bold text-lg font-bold">{title}</div>
       <Row md={2} xs={1} lg={5} className="g-3 flex-wrap">
         {product.map((item) => (
           <Col key={item.id}>
