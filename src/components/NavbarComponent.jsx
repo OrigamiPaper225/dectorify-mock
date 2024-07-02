@@ -19,7 +19,7 @@ function NavbarComponent() {
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
               <span className="text-semibold">
-                Signed Out (jl737p@wayfair.com)
+                Sign Out (jl737p@wayfair.com)
               </span>
             </Navbar.Text>
           </Navbar.Collapse>

@@ -5,15 +5,15 @@ import NavbarComponent from "./components/NavbarComponent"
 import ImageScreen from "./components/ImageScreen"
 import "bootstrap/dist/css/bootstrap.css"
 import RecProducts from "./components/RecProducts"
+import Spinner from "react-bootstrap/Spinner"
 
 export default function App() {
-
   const [imageIndex, setImageIndex] = useState(0)
-
+  const [spinnerState, setSpinnerState] = useState(false)
   useEffect(() => {
     console.log("image Index:", imageIndex)
   }, [imageIndex])
-  
+
   const images = [
     {
       image: room0,
@@ -21,8 +21,8 @@ export default function App() {
     },
     {
       image: room1,
-      caption: "Modified Room"
-    }
+      caption: "Modified Room",
+    },
   ]
   const products1 = [
     {
@@ -89,11 +89,19 @@ export default function App() {
     },
   ]
 
+  const handleSpinner = () => {
+    setSpinnerState(true)
+
+    setTimeout(() => {
+      setSpinnerState(false)
+    }, 2000)
+  }
   const handleImageChange = () => {
     const nextIndex = imageIndex + 1
     if (nextIndex < images.length) {
       setImageIndex(nextIndex)
     }
+    handleSpinner()
   }
   return (
     <>
@@ -101,12 +109,23 @@ export default function App() {
       <div className="w-screen flex flex-col">
         <div className="flex w-full">
           <div className=" flex w-1/2 mr-6">
-            <ImageScreen
-              imageInfo={images[imageIndex]}
-            />
+            {spinnerState ? (
+              <div className="flex w-full h-full justify-center align-center mt-52">
+                <Spinner animation="border" role="status" variant="primary">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              </div>
+            ) : (
+              <ImageScreen imageInfo={images[imageIndex]} />
+            )}
           </div>
           <div className=" flex w-1/2">
-            <RecProducts products1={products1} products2={products2} handleImageChange={handleImageChange} />
+            <RecProducts
+              products1={products1}
+              products2={products2}
+              handleImageChange={handleImageChange}
+              handleSpinner={handleSpinner}
+            />
           </div>
         </div>
       </div>

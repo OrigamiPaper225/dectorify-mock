@@ -1,8 +1,12 @@
 import Assortment from "./Assortment"
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa"
 
-const RecProducts = ({products1, products2, handleImageChange}) => {
-
+const RecProducts = ({
+  products1,
+  products2,
+  handleImageChange,
+  handleSpinner,
+}) => {
   return (
     <div className="flex flex-column content-center justify-center mt-5">
       <div className="">
@@ -17,15 +21,23 @@ const RecProducts = ({products1, products2, handleImageChange}) => {
       </div>
       <hr />
       <div>
-        <h1 className="py-3 text-2xl font-bold text-center">Edit your room here!</h1>
-        <div class="w-full relative flex space-y-3">
-          <input type="text" class="py-3 px-4 outline block w-100 border-black rounded-lg text-lg pr-20" placeholder="Enter prompt here..."/>
-          <div className=" absolute rounded-full w-10 h-10 bg-purple-800 text-white flex justify-center items-center right-2 cursor-pointer" onClick={handleImageChange}>
-            <FaArrowUp size={20}/>
+        <h1 className="py-3 text-2xl font-bold text-center">
+          Edit your room here!
+        </h1>
+        <div className="w-full relative flex space-y-3">
+          <input
+            type="text"
+            className="py-3 px-4 outline block w-100 border-black rounded-lg text-lg pr-20"
+            placeholder="Enter prompt here..."
+          />
+          <div
+            className=" absolute rounded-full w-10 h-10 bg-purple-800 text-white flex justify-center items-center right-2 cursor-pointer"
+            onClick={handleImageChange}
+          >
+            <FaArrowUp size={20} />
           </div>
         </div>
       </div>
-      
     </div>
   )
 }
