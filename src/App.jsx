@@ -1,8 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css"
+import NavbarComponent from "./components/NavbarComponent"
 
 export default function App() {
   return (
-    <div>
-      test
-    </div>
+    <>
+      <NavbarComponent />
+      <div>test</div>
+    </>
   )
 }
