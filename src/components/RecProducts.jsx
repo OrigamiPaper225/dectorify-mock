@@ -16,8 +16,8 @@ const RecProducts = ({
         </p>
       </div>
       <div className="-space-y-4">
-        <Assortment title="Accent Chairs" product={products1} />
-        <Assortment title="End Tables" product={products2} />
+        <Assortment title="Coffee Tables" product={products1} />
+        <Assortment title="Lamps" product={products2} />
       </div>
       <hr />
       <div>

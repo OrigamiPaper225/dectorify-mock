@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import room0 from "./assets/room_pictures/rooms_0.jpg"
 import room1 from "./assets/room_pictures/rooms_1.jpg"
+import room2 from "./assets/room_pictures/rooms_2.jpg"
+import room3 from "./assets/room_pictures/rooms_3.jpg"
 import NavbarComponent from "./components/NavbarComponent"
 import ImageScreen from "./components/ImageScreen"
 import "bootstrap/dist/css/bootstrap.css"
@@ -17,12 +19,24 @@ export default function App() {
   const images = [
     {
       image: room0,
-      caption: "Uploaded Room",
+      caption: "Default room",
     },
     {
       image: room1,
-      caption: "Modified Room",
+      caption: "New curtains, chairs, and table",
     },
+    {
+      image: room2,
+      caption: "New table selected",
+    },
+    {
+      image: room3,
+      caption: "Switched cabinet and sofa"
+    },
+    {
+      image: room3,
+      caption: "Switched to evening lighting"
+    }
   ]
   const products1 = [
     {

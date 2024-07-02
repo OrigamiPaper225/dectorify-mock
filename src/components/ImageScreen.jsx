@@ -5,14 +5,13 @@ import { MdOutlineZoomIn } from "react-icons/md";
 import { GrUndo } from "react-icons/gr";
 
 export default function ImageScreen({imageInfo}) {
-    console.log(imageInfo)
     return (
         <div className=" flex flex-col mt-10 pt-10 w-full h-full">
             <div className="mx-5 flex flex-col justify-center items-center">
               <div className="w-[750px] h-[520px] outline outline-gray-200 flelx flex-col justify-center p-2 shadow">
                 <img width={735} height={700} src={imageInfo.image} alt="default room" />
                 <div className="flex justify-between mt-4">
-                  <h1 className="font-semibold text-2xl pt-2">
+                  <h1 className="font-semibold text-2xl pt-2 italic pl-2">
                     {imageInfo.caption}
                   </h1>
                   <div className=" w-1/3 pt-2 flex gap-4">
