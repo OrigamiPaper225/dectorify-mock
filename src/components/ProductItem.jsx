@@ -1,10 +1,14 @@
 import { Card } from "react-bootstrap"
 
 // eslint-disable-next-line react/prop-types
-const ProductItem = ({ title, imgUrl }) => {
+const ProductItem = ({ title, imgUrl, handleImageChange, reorderTables}) => {
   console.log(title, imgUrl)
+  const handleClick = () => {
+    reorderTables()
+    handleImageChange()
+  }
   return (
-    <Card className="h-75">
+    <Card className="h-75 cursor-pointer" onClick={handleClick}>
       <Card.Img
         variant="top"
         src={imgUrl}

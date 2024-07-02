@@ -10,9 +10,67 @@ import "bootstrap/dist/css/bootstrap.css"
 import RecProducts from "./components/RecProducts"
 import Spinner from "react-bootstrap/Spinner"
 
+var products1_arr = [
+  {
+    id: 1,
+    title: "Brycin Coffee Table",
+    imgUrl:"https://assets.wfcdn.com/im/12611661/resize-h3200-w3200%5Ecompr-r85/4719/47194069/Brycin+Coffee+Table.jpg"
+  },
+  {
+    id: 2,
+    title: "Eoghan Lift Top Coffee Table",
+    imgUrl:"https://assets.wfcdn.com/im/44138724/resize-h3200-w3200%5Ecompr-r85/2361/236106708/Eoghan+Lift+Top+Coffee+Table+with+2+Drawers.jpg"
+  },
+  {
+    id: 3,
+    title: "Santos Coffee Table",
+    imgUrl:"https://assets.wfcdn.com/im/02880165/resize-h1000-w1000%5Ecompr-r85/4986/49863211/Santos+Coffee+Table.jpg"
+  },
+  {
+    id: 4,
+    title: "Larenda Coffee Table",
+    imgUrl:"https://assets.wfcdn.com/im/69813446/resize-h3200-w3200%5Ecompr-r85/7229/72298063/Larenda+Coffee+Table.jpg"
+  },
+  {
+    id: 5,
+    title: "Angleca Coffee Table",
+    imgUrl:"https://assets.wfcdn.com/im/49024646/resize-h800-w800%5Ecompr-r85/1619/161902727/Angeleca+Coffee+Table.jpg"
+  },
+]
+var products2_arr = [
+  {
+    id: 1,
+    title: "Barnwell Glass Table Lamp",
+    imgUrl: "https://assets.wfcdn.com/im/91710290/resize-h445%5Ecompr-r85/2473/247388158/Barnwell+Glass+Table+Lamp.jpg",
+  },
+  {
+    id: 2,
+    title: "Holyfield Table Lamp",
+    imgUrl: "https://assets.wfcdn.com/im/88902079/resize-h445%5Ecompr-r85/1598/159825098/Holyfield+Table+Lamp.jpg",
+  },
+  {
+    id: 3,
+    title: "Pridmore Table Lamp",
+    imgUrl: "https://assets.wfcdn.com/im/03589516/resize-h445%5Ecompr-r85/2237/223765609/Pridmore+Table+Lamp.jpg",
+  },
+  {
+    id: 4,
+    title: "Pottorff Table Lamp",
+    imgUrl: "https://assets.wfcdn.com/im/82595039/resize-h445%5Ecompr-r85/1967/196715895/Pottorff+Table+Lamp.jpg",
+  },
+  {
+    id: 5,
+    title: "Heavener Glass Table Lamp",
+    imgUrl: "https://assets.wfcdn.com/im/21091286/resize-h445%5Ecompr-r85/1203/120339848/Heavener+Glass+Table+Lamp.jpg",
+  },
+]
+
 export default function App() {
   const [imageIndex, setImageIndex] = useState(0)
   const [spinnerState, setSpinnerState] = useState(false)
+  const [products1, setProducts1] = useState(products1_arr)
+  const [products2, setProducts2] = useState(products2_arr)
+
   useEffect(() => {
     console.log("image Index:", imageIndex)
   }, [imageIndex])
@@ -39,70 +97,6 @@ export default function App() {
       caption: "Switched to evening lighting"
     }
   ]
-  const products1 = [
-    {
-      id: 1,
-      title: "Sherry Leather Power Recliner",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F54014212%2Fresize-h300-w300%255Ecompr-r85%2F2247%2F224729460%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 2,
-      title: "Arshanti Armchair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F05653766%2Fresize-h300-w300%255Ecompr-r85%2F2044%2F204435549%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 3,
-      title: "Libra Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F32147374%2Fresize-h300-w300%255Ecompr-r85%2F1685%2F168542398%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 4,
-      title: "Mona Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F25444504%2Fresize-h300-w300%255Ecompr-r85%2F2497%2F249753127%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 5,
-      title: "Mona Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F25444504%2Fresize-h300-w300%255Ecompr-r85%2F2497%2F249753127%2Fdefault_image.jpg&w=384&q=75",
-    },
-  ]
-  const products2 = [
-    {
-      id: 1,
-      title: "Sherry Leather Power Recliner",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F42518546%2Fresize-h300-w300%255Ecompr-r85%2F2541%2F254164462%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 2,
-      title: "Arshanti Armchair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F20925873%2Fresize-h300-w300%255Ecompr-r85%2F1451%2F145125221%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 3,
-      title: "Libra Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F61702629%2Fresize-h300-w300%255Ecompr-r85%2F7235%2F72357247%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 4,
-      title: "Mona Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F02158420%2Fresize-h300-w300%255Ecompr-r85%2F1934%2F193411511%2Fdefault_image.jpg&w=384&q=75",
-    },
-    {
-      id: 5,
-      title: "Mona Upholstered Chair",
-      imgUrl:
-        "https://www.wayfairnext.com/decorify/_next/image?url=https%3A%2F%2Fsecure.img1-fg.wfcdn.com%2Fim%2F11351060%2Fresize-h300-w300%255Ecompr-r85%2F2402%2F240299613%2Fdefault_image.jpg&w=384&q=75",
-    },
-  ]
 
   const handleSpinner = () => {
     setSpinnerState(true)
@@ -116,7 +110,14 @@ export default function App() {
     if (nextIndex < images.length) {
       setImageIndex(nextIndex)
     }
-    handleSpinner()
+    // handleSpinner()
+  }
+
+  const reorderTables = () => {
+    var tables = products1
+    var selectedTable = tables.splice(3, 1)
+    tables.splice(0, 0, selectedTable[0])
+    setProducts1(tables)
   }
   
   const handleImageBack = () => {
@@ -148,6 +149,7 @@ export default function App() {
               products2={products2}
               handleImageChange={handleImageChange}
               handleSpinner={handleSpinner}
+              reorderTables={reorderTables}
             />
           </div>
         </div>

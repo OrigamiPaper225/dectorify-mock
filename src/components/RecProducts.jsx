@@ -6,6 +6,7 @@ const RecProducts = ({
   products2,
   handleImageChange,
   handleSpinner,
+  reorderTables
 }) => {
   return (
     <div className="flex flex-column content-center justify-center mt-5">
@@ -19,12 +20,14 @@ const RecProducts = ({
         <Assortment
           title="Coffee Tables"
           product={products1}
-          handSpinner={handleSpinner}
+          handleImageChange={handleImageChange}
+          reorderTables={reorderTables}
         />
         <Assortment
           title="Lamps"
           product={products2}
-          handSpinner={handleSpinner}
+          handleImageChange={handleImageChange}
+          reorderTables={reorderTables}
         />
       </div>
       <hr className="-mt-5" />
@@ -35,7 +38,7 @@ const RecProducts = ({
         <div className="w-full relative flex space-y-3">
           <input
             type="text"
-            className="py-3 px-4 block w-100 border border-stone-600 border-2 rounded-lg text-lg pr-20"
+            className="py-3 px-4 block w-100 border-stone-600 border-2 rounded-lg text-lg pr-20"
             placeholder="Enter prompt here..."
           />
           <div
