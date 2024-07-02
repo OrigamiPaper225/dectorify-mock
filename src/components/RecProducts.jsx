@@ -1,4 +1,5 @@
 import Assortment from "./Assortment"
+import { FaArrowUp } from "react-icons/fa";
 
 const RecProducts = () => {
   const products = [
@@ -79,6 +80,17 @@ const RecProducts = () => {
         <Assortment title="Accent Chairs" product={products} />
         <Assortment title="End Tables" product={products2} />
       </div>
+      <hr />
+      <div>
+        <h1 className="py-3 text-2xl font-bold text-center">Edit your room here!</h1>
+        <div class="w-full relative flex space-y-3">
+          <input type="text" class="py-3 px-4 outline block w-100 border-black rounded-lg text-lg pr-20" placeholder="Enter prompt here..."/>
+          <div className=" absolute rounded-full w-10 h-10 bg-purple-800 text-white flex justify-center items-center right-2 cursor-pointer">
+            <FaArrowUp size={20}/>
+          </div>
+        </div>
+      </div>
+      
     </div>
   )
 }

@@ -17,7 +17,7 @@ export default function App() {
             />
           </div>
           <div className=" flex w-1/2">
-            <RecProducts></RecProducts>
+            <RecProducts />
           </div>
         </div>
       </div>
