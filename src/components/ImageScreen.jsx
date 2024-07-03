@@ -3,6 +3,7 @@ import { CiShare2 } from "react-icons/ci"
 import { MdDelete } from "react-icons/md"
 import { MdOutlineZoomIn } from "react-icons/md"
 import { GrUndo } from "react-icons/gr"
+import { Button } from "react-bootstrap"
 
 export default function ImageScreen({ imageInfo, handleImageBack }) {
   return (
@@ -83,9 +84,12 @@ export default function ImageScreen({ imageInfo, handleImageBack }) {
         >
           <GrUndo size={25} />
         </div>
-        <div className=" w-64 h-10 rounded-full cursor-pointer text-white text-lg font-medium bg-purple-800 flex justify-center items-center">
+        <Button className="w-64 h-10 rounded-full text-white text-lg font-medium bg-purple-800">
           Create More Designs
-        </div>
+        </Button>
+        {/* <div className=" w-64 h-10 rounded-full cursor-pointer text-white text-lg font-medium bg-purple-800 flex justify-center items-center"> */}
+        {/* Create More Designs */}
+        {/* </div> */}
       </div>
     </div>
   )
