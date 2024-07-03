@@ -126,10 +126,12 @@ export default function App() {
   }
   const handleImageChange = () => {
     const nextIndex = imageIndex + 1
-    if (nextIndex < images.length) {
+    if (nextIndex == images.length) {
+      handleShow()
+    } else {
       setImageIndex(nextIndex)
+      handleSpinner()
     }
-    handleSpinner()
   }
 
   const reorderTables = () => {
