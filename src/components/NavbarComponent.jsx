@@ -16,11 +16,19 @@ function NavbarComponent() {
             <span className="font-bold text-2xl">Decorify</span>
           </Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+
+          <Navbar.Collapse className="justify-content-end pl-10 font-medium text-lg">
             <Navbar.Text>
-              <span className="text-semibold">
-                Sign Out (jl737p@wayfair.com)
-              </span>
+              <span>My Designs</span>
+            </Navbar.Text>
+            <Navbar.Text className="pl-12">
+              <span>My Favorites</span>
+            </Navbar.Text>
+            <Navbar.Text className="pl-12">
+              <span>Help</span>
+            </Navbar.Text>
+            <Navbar.Text className="pl-12">
+              <span>Sign Out (jl737p@wayfair.com)</span>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
