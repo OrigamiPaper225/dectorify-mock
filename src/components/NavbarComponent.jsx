@@ -1,4 +1,5 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, Navbar } from "react-bootstrap"
+import logo from "../assets/logo.jpeg"
 
 function NavbarComponent() {
   return (
@@ -8,7 +9,7 @@ function NavbarComponent() {
           <Navbar.Brand href="#home">
             <img
               alt=""
-              src="https://www.wayfairnext.com/decorify/_next/image?url=%2Fdecorify%2Fimages%2Fwf_next_beta.png&w=64&q=75"
+              src={logo}
               width="30"
               height="30"
               className="d-inline-block align-top"
